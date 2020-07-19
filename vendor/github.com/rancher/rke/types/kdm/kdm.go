@@ -11,6 +11,7 @@ const (
 	Canal         = "canal"
 	Flannel       = "flannel"
 	Weave         = "weave"
+	Aci           = "ACI"
 	CoreDNS       = "coreDNS"
 	KubeDNS       = "kubeDNS"
 	MetricsServer = "metricsServer"
