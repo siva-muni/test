@@ -540,7 +540,7 @@ spec:
                         description: NetworkPolicyPort describes the port and protocol to match in a rule.
                         properties:
                           endPort:
-                            description: EndPort defines the end of the port range, being the end included within the range. It can only be specified when a numerical `port` is specified.
+                            description: EndPort defines the end of the port range, being the end included within the range. It can only be specified when a numerical "port" is specified.
                             format: int32
                             type: integer
                           port:
@@ -729,7 +729,7 @@ spec:
                         description: NetworkPolicyPort describes the port and protocol to match in a rule.
                         properties:
                           endPort:
-                            description: EndPort defines the end of the port range, being the end included within the range. It can only be specified when a numerical `port` is specified.
+                            description: EndPort defines the end of the port range, being the end included within the range. It can only be specified when a numerical "port" is specified.
                             format: int32
                             type: integer
                           port:
