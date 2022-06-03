@@ -1463,7 +1463,7 @@ data:
                "extern_dynamic": "{{.DynamicExternalSubnet}}",
                "node_svc_subnet": "{{.NodeSvcSubnet}}",
                "interface_mtu": "{{.MTU}}",
-               "interface-mtu-headroom": "{{.MTUHeadroom}}",
+               "interface-mtu-headroom": "{{.MtuHeadroom}}",
                "service_monitor_interval": "{{.ServiceMonitorInterval}}",
                "pbr_tracking_non_snat": "{{.PBRTrackingNonSnat}}",
                "pod_subnet_chunk_size": "{{.PodSubnetChunkSize}}",
