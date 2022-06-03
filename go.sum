@@ -512,8 +512,8 @@ github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f/go.mod h1:qRW
 github.com/mxk/go-flowrate v0.0.0-20140419014527-cca7078d478f/go.mod h1:ZdcZmHo+o7JKHSa8/e818NopupXU1YMK5fe1lsApnBw=
 github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e h1:fD57ERR4JtEqsWbfPhv4DMiApHyliiK5xCTNVSPiaAs=
 github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e/go.mod h1:zD1mROLANZcx1PVRCS0qkT7pwLkGfwJo4zjcN/Tysno=
-github.com/noironetworks/rke v0.0.0-20220527113801-fba8849133da h1:6ItH82d7Qku6QMzA38tBy4tWH3SR6EhRqWrtFS5juks=
-github.com/noironetworks/rke v0.0.0-20220527113801-fba8849133da/go.mod h1:roTVdeu+calHsLQEOe4+ibh73Noq70MiXjPPPfpx2AY=
+github.com/noironetworks/rke v0.0.0-20220603092216-352c7b6bfba0 h1:DWIIZ03RzI88Uhu+x+3NWrf/A38g4nKEDkiz3qiRbq0=
+github.com/noironetworks/rke v0.0.0-20220603092216-352c7b6bfba0/go.mod h1:roTVdeu+calHsLQEOe4+ibh73Noq70MiXjPPPfpx2AY=
 github.com/nxadm/tail v1.4.4/go.mod h1:kenIhsEOeOJmVchQTgglprH7qJGnHDVpk1VPCcaMI8A=
 github.com/oklog/ulid v1.3.1/go.mod h1:CirwcVhetQ6Lv90oh/F+FBtV6XMibvdAFo93nm5qn4U=
 github.com/olekukonko/tablewriter v0.0.0-20170122224234-a0225b3f23b5/go.mod h1:vsDQFd/mU46D+Z4whnwzcISnGGzXWMclvtLoiIKAKIo=
