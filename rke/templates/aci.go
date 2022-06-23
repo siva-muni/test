@@ -2286,7 +2286,6 @@ spec:
 {{- end}}
       tolerations:
         - operator: Exists
-{{- if ne .UseCniDeployInitcontainer ""}}
       initContainers:
         - name: cnideploy
           image: {{.AciCniDeployContainer}}
@@ -2301,7 +2300,6 @@ spec:
           volumeMounts:
             - name: cni-bin
               mountPath: /mnt/cni-bin
-{{- end}}
 {{- if ne .NoPriorityClass "true"}}
       priorityClassName: system-cluster-critical
 {{- end}}
