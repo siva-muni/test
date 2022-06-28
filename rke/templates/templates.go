@@ -168,7 +168,7 @@ func LoadK8sVersionedTemplates() map[string]map[string]string {
 			">=1.8.0-rancher0 <1.16.0-alpha":         weavev18,
 		},
 		kdm.Aci: {
-			">=1.17.0-alpha": aciv500,
+			">=1.17.0-alpha <1.20.0-rancher0": aciv500,
 			">=1.20.0-rancher0": aciv523,
 		},
 		kdm.NginxIngress: {
