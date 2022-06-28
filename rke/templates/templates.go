@@ -69,6 +69,7 @@ const (
 	if required
 	*/
 	aciv500 = "aci-v5.0.0"
+	aciv523 = "aci-v5.2.3"
 
 	nginxIngressv18          = "nginxingress-v1.8"
 	nginxIngressV115         = "nginxingress-v1.15"
@@ -168,6 +169,7 @@ func LoadK8sVersionedTemplates() map[string]map[string]string {
 		},
 		kdm.Aci: {
 			">=1.17.0-alpha": aciv500,
+			">=1.20.0-rancher0": aciv523
 		},
 		kdm.NginxIngress: {
 			">=1.8.0-rancher0 <1.13.10-rancher1-3":  nginxIngressv18,
@@ -270,6 +272,7 @@ func getTemplates() map[string]string {
 		weavev122: WeaveTemplateV122,
 
 		aciv500: AciTemplateV500,
+		aciv500: AciTemplateV523,
 
 		nginxIngressv18:          NginxIngressTemplate,
 		nginxIngressV115:         NginxIngressTemplateV0251Rancher1,
