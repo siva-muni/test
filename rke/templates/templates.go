@@ -169,7 +169,7 @@ func LoadK8sVersionedTemplates() map[string]map[string]string {
 		},
 		kdm.Aci: {
 			">=1.17.0-alpha <1.20.0-rancher0": aciv500,
-			">=1.20.0-rancher0": aciv523,
+			">=1.20.0-rancher0 <1.23.0-rancher1-1": aciv523,
 		},
 		kdm.NginxIngress: {
 			">=1.8.0-rancher0 <1.13.10-rancher1-3":  nginxIngressv18,
