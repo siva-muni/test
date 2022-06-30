@@ -1929,7 +1929,7 @@ spec:
                                     key:
                                       type: string
                                     operator:
-                                      description: operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+                                      description: operator represents a keys relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
                                       type: string
                                     values:
                                       description: values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
@@ -1947,7 +1947,7 @@ spec:
                                 type: object
                             type: object
                           podSelector:
-                            description: Select Pods from NetworkPolicy's Namespace as workloads in AppliedTo/To/From fields. If set with NamespaceSelector, Pods are matched from Namespaces matched by the NamespaceSelector. Cannot be set with any other selector except NamespaceSelector.
+                            description: Select Pods from NetworkPolicys Namespace as workloads in AppliedTo/To/From fields. If set with NamespaceSelector, Pods are matched from Namespaces matched by the NamespaceSelector. Cannot be set with any other selector except NamespaceSelector.
                             properties:
                               matchExpressions:
                                 items:
@@ -1955,7 +1955,7 @@ spec:
                                     key:
                                       type: string
                                     operator:
-                                      description: operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+                                      description: operator represents a keys relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
                                       type: string
                                     values:
                                       description: values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
@@ -2024,7 +2024,7 @@ spec:
                                     key:
                                       type: string
                                     operator:
-                                      description: operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+                                      description: operator represents a keys relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
                                       type: string
                                     values:
                                       description: values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
@@ -2042,7 +2042,7 @@ spec:
                                 type: object
                             type: object
                           podSelector:
-                            description: Select Pods from NetworkPolicy's Namespace as workloads in AppliedTo/To/From fields. If set with NamespaceSelector, Pods are matched from Namespaces matched by the NamespaceSelector. Cannot be set with any other selector except NamespaceSelector.
+                            description: Select Pods from NetworkPolicys Namespace as workloads in AppliedTo/To/From fields. If set with NamespaceSelector, Pods are matched from Namespaces matched by the NamespaceSelector. Cannot be set with any other selector except NamespaceSelector.
                             properties:
                               matchExpressions:
                                 description: matchExpressions is a list of label selector requirements. The requirements are ANDed.
@@ -2051,7 +2051,7 @@ spec:
                                     key:
                                       type: string
                                     operator:
-                                      description: operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+                                      description: operator represents a keys relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
                                       type: string
                                     values:
                                       description: values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
@@ -2179,7 +2179,7 @@ spec:
                             key:
                               type: string
                             operator:
-                              description: operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
+                              description: operator represents a keys relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
                               type: string
                             values:
                               description: values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
@@ -2702,7 +2702,7 @@ data:
         "apic-hosts": {{.ApicHosts}},
         "apic-refreshtime": "{{.ApicRefreshTime}}",
         "apic-subscription-delay": {{.ApicSubscriptionDelay}},
-        "apic_refreshticker_adjust": "{{.ApicRefreshtickerAdjust}}",
+        "apic_refreshticker_adjust": "{{.ApicRefreshTickerAdjust}}",
         "apic-username": "{{.ApicUserName}}",
         "apic-private-key-path": "/usr/local/etc/aci-cert/user.key",
         "aci-prefix": "{{.SystemIdentifier}}",
@@ -2884,9 +2884,9 @@ data:
         "interface-mtu": {{.MTU}},
 {{- end}}
 {{- end}}
-{{- if .MTUHeadroom}}
-{{- if ne .MTUHeadroom 0}}
-        "interface-mtu-headroom": {{.MTUHeadroom}},
+{{- if .MTUHeadRoom}}
+{{- if ne .MTUHeadRoom 0}}
+        "interface-mtu-headroom": {{.MTUHeadRoom}},
 {{- end}}
 {{- end}}
         "cni-netconfig": [
@@ -2968,8 +2968,8 @@ data:
             }        },
         "enable-drop-log": {{.DropLogEnable}},
         "enable_endpointslice": {{.EnableEndpointSlice}},
-        "enable-nodepodif": {{.NodepodifEnable}},
-        "enable-ovs-hw-offload": {{.SrioEnable}}
+        "enable-nodepodif": {{.NodePodIfEnable}},
+        "enable-ovs-hw-offload": {{.SriovEnable}}
     }
   opflex-agent-config: |-
     {
@@ -3556,7 +3556,7 @@ spec:
               value: 'True'
 {{- else}}
             - name: DURATION_WAIT_FOR_NETWORK
-            value: {{'\"' + .DurationWaitForNetwork + '\"'}}
+              value: "{{.DurationWaitForNetwork}}"
 {{- end}}
           volumeMounts:
             - name: cni-bin
@@ -3634,7 +3634,7 @@ spec:
           ports:
             - containerPort: {{.OpflexServerPort}}
             - name: metrics
-                containerPort: 9632
+              containerPort: 9632
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           volumeMounts:
@@ -3830,14 +3830,14 @@ spec:
 {{- else }}
       tolerations:
       - effect: NoExecute
-      operator: Exists
-      tolerationSeconds: 60
-    - effect: NoSchedule
-      key: node.kubernetes.io/not-ready
-      operator: Exists
-    - effect: NoSchedule
-      key: node-role.kubernetes.io/master
-      operator: Exists
+        operator: Exists
+        tolerationSeconds: 60
+      - effect: NoSchedule
+        key: node.kubernetes.io/not-ready
+        operator: Exists
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+        operator: Exists
 {{- end }}
 {{- if ne .NoPriorityClass "true"}}
       priorityClassName: system-node-critical
