@@ -6,7 +6,7 @@ func loadK8sRKESystemImages() map[string]v3.RKESystemImages {
 	return map[string]v3.RKESystemImages{
 		// removed bad versions because panics, hyperkube image doesn't match.
 		"v1.8.11-rancher2-1": {
-			Etcd:                      m("quay.io/coreos/etcd:v3.0.17"),
+			Etcd:                      m("quay.io/coreos/etcd:v3.0.17 "),
 			Kubernetes:                m("rancher/hyperkube:v1.8.11-rancher2"),
 			Alpine:                    m("rancher/rke-tools:v0.1.8"),
 			NginxProxy:                m("rancher/rke-tools:v0.1.8"),
